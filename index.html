@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Elementos gráficos de mercado espalhados -->
+    <div class="market-bg">
+        <span class="market-item item-1">🥕</span>
+        <span class="market-item item-2">🍎</span>
+        <span class="market-item item-3">🥬</span>
+        <span class="market-item item-4">🥔</span>
+        <span class="market-item item-5">🍊</span>
+        <span class="market-item item-6">🥒</span>
+        <span class="market-item item-7">🍌</span>
+        <span class="market-item item-8">🧅</span>
+        <span class="market-item item-9">🍓</span>
+        <span class="market-item item-10">🥝</span>
+        <span class="market-item item-11">🥤</span>
+        <span class="market-item item-12">🧈</span>
+        <span class="market-item item-13">🍞</span>
+        <span class="market-item item-14">🥚</span>
+        <span class="market-item item-15">🧀</span>
+        <span class="market-item item-16">🥒</span>
+        <span class="market-item item-17">🍉</span>
+        <span class="market-item item-18">🥬</span>
+        <span class="market-item item-19">🍅</span>
+        <span class="market-item item-20">🥛</span>
+    </div>
+
+    <div class="container">
+        <!-- Header com tema de supermercado -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🛒 Minha Lista de Compras</h1>
+                <p class="subtitle">Organize suas compras com facilidade</p>
+            </div>
+        </header>
+
+        <!-- Seção de entrada de novos itens -->
+        <div class="input-section">
+            <div class="input-group">
+                <select id="categorySelect" class="category-select">
+                    <option value="comida">🍎 Comida</option>
+                    <option value="bebidas">🥤 Bebidas</option>
+                    <option value="doces">🍭 Doces & Sobremesas</option>
+                    <option value="limpeza">🧹 Limpeza</option>
+                    <option value="higiene">🧴 Higiene & Banho</option>
+                    <option value="otros">📦 Outros</option>
+                </select>
+                <input 
+                    type="text" 
+                    id="itemInput" 
+                    placeholder="Digite o item que deseja adicionar..."
+                    class="input-field"
+                >
+                <button id="addBtn" class="btn btn-add">➕ Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Estatísticas -->
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-icon">📝</span>
+                <div class="stat-info">
+                    <p class="stat-label">Total de itens</p>
+                    <p class="stat-value" id="totalItems">0</p>
+                </div>
+            </div>
+            <div class="stat-box">
+                <span class="stat-icon">✅</span>
+                <div class="stat-info">
+                    <p class="stat-label">Já comprados</p>
+                    <p class="stat-value" id="completedItems">0</p>
+                </div>
+            </div>
+            <div class="stat-box">
+                <span class="stat-icon">🛍️</span>
+                <div class="stat-info">
+                    <p class="stat-label">Faltam comprar</p>
+                    <p class="stat-value" id="remainingItems">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de compras -->
+        <div class="list-container">
+            <h2 class="list-title">Itens da Lista</h2>
+            <ul id="itemList" class="item-list">
+                <!-- Itens serão adicionados aqui via JavaScript -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <p>🏪 Nenhum item na lista ainda</p>
+                <p class="empty-state-text">Comece adicionando os itens que precisa comprar!</p>
+            </div>
+        </div>
+
+        <!-- Botões de ação -->
+        <div class="action-buttons">
+            <button id="saveBtn" class="btn btn-save">💾 Salvar Lista</button>
+            <button id="clearBtn" class="btn btn-clear">🗑️ Limpar Tudo</button>
+        </div>
+
+        <!-- Mensagem de status -->
+        <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
