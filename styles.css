@@ -517,3 +517,24 @@ body {
         width: 100%;
     }
 }
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: var(--cinza-escuro);
+    font-size: 0.95em;
+    position: relative;
+    z-index: 10;
+}
+
+.footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+.footer strong {
+    color: var(--rosa-claro);
+    font-weight: 700;
+}
